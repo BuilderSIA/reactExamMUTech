@@ -1,6 +1,7 @@
 export const data = [
     {
         id: 1,
+        category: 'food',
         name: 'Non kabob',
         price: '27 000',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, deleniti.',
@@ -9,6 +10,7 @@ export const data = [
     },
     {
         id: 2,
+        category: 'food',
         name: 'Hot- dog (mini)',
         price: '10 000',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, deleniti.',
@@ -16,6 +18,7 @@ export const data = [
     },
     {
         id: 3,
+        category: 'food',
         name: 'Hot- dog (medium)',
         price: '17 000',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, deleniti.',
@@ -24,6 +27,7 @@ export const data = [
     },
     {
         id: 4, 
+        category: 'food',
         name: 'Hot- dog (big)',
         price: '20 000',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, deleniti.',
@@ -32,6 +36,7 @@ export const data = [
     },
     {
         id: 5,
+        category: 'food',
         name: 'Hot- dog (assorti)',
         price: '27 000',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, deleniti.',

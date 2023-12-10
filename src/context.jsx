@@ -47,13 +47,13 @@ export const AppProvider = ({children}) =>{
       const [pname,setPname] = useState('');
       const [price,setPrice] = useState('');
       const [products,setProducts] = useState(data)
-      const [modal,setModal] = useState(false);
+    //   const [modal,setModal] = useState(false);
       const [edit,setEdit] = useState(false);
       const [editID,setEditID] = useState(null);
       const [added, setAdded] = useState(getStore('cart'));
     
       const userid = uuid();
-      const img = 'https://picsum.photos/200/300?random';
+      
       
       const handSignIn = () =>{
         const newUser = { id:userid, name: name, password: psw};
@@ -81,22 +81,22 @@ export const AppProvider = ({children}) =>{
         location.pathname = '/'
       }
     
-      const deleteProd = (id) =>{
-        const newProds = products.filter((item)=> item.id !== id);
-        setProducts(newProds)
-      }
+    //   const deleteProd = (id) =>{
+    //     const newProds = products.filter((item)=> item.id !== id);
+    //     setProducts(newProds)
+    //   }
       
-      const editProd = (id) =>{
-        const oldItem = products.find((item) => item.id === id);
-        setEditID(id)
-        setPname(oldItem.name)
-        setPrice(oldItem.price)
-        setModal(!modal)
-        setEdit(true)
-      }
+    //   const editProd = (id) =>{
+    //     const oldItem = products.find((item) => item.id === id);
+    //     setEditID(id)
+    //     setPname(oldItem.name)
+    //     setPrice(oldItem.price)
+    //     setModal(!modal)
+    //     setEdit(true)
+    //   }
       const addCart = (id)=>{
         const theItem = products.find((item)=> item.id === id);
-        const cartItem = {id:theItem.id, name:theItem.name, amount:1}
+        const cartItem = {id:theItem.id, img:theItem.img, price:theItem.price, name:theItem.name, amount:1}
         setAdded([...added , cartItem])
         location.reload()
       }
@@ -115,15 +115,14 @@ export const AppProvider = ({children}) =>{
               ...state,
               name, setName,
               psw, setPsw,
-              userid, img,
+              userid,
               login, setLogin,
               pname, setPname,
               price, setPrice,
               edit, setEdit,
               editID, setEditID,
               user, setUser,
-              products, setProducts, editProd,
-              deleteProd, signOut,
+              products, setProducts, signOut,
               handSignIn, useEffect,
               clearCart,inc,dec,
               addCart,added

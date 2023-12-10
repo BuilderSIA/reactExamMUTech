@@ -1,13 +1,9 @@
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
-import { Navbar, ProtectedRoute } from './components'
-import Cards from './pages/Cards/Cards'
-import { Home } from './pages'
-import AboutUs from './pages/AboutUs/AboutUs'
-import Login from './components/Login'
+import { Login, Navbar, ProtectedRoute } from './components'
+import { AboutUs, Cards, Cart, Home, Profile } from './pages'
 import { UseGlobalContext } from './context'
-import Profile from './pages/Profile/Profile'
-import Cart from './pages/Cart/Cart'
+
 
 
 function App() {

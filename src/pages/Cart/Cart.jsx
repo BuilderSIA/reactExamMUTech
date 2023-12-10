@@ -2,6 +2,7 @@ import { UseGlobalContext } from "../../context";
 import CartList from "./CartList";
 
 
+
 function Cart() {
     const {added} = UseGlobalContext()
     return (

@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/no-unescaped-entities */
-
+import './Card.scss'
 import { UseGlobalContext } from "../../context"
 
 

@@ -1,16 +1,11 @@
-<<<<<<< HEAD
-=======
+
 /* eslint-disable react/prop-types */
->>>>>>> c9aa8b0ad97e392964da2172e3a5ea71197ebcb0
+
 import { createContext, useContext, useEffect, useReducer, useState } from "react";
 import { reducer } from "./reducer";
 import { data } from "./data";
 import { getStore, getUser } from "./utils";
 import uuid from "react-uuid";
-<<<<<<< HEAD
-
-=======
->>>>>>> c9aa8b0ad97e392964da2172e3a5ea71197ebcb0
 
 
 
@@ -25,14 +20,10 @@ const initialState = {
 
 export const AppContext = createContext()
 
-<<<<<<< HEAD
-export const AppProvider = ({ children }) => {
-   
-=======
+
 export const AppProvider = ({children}) =>{
 
-  
->>>>>>> c9aa8b0ad97e392964da2172e3a5ea71197ebcb0
+
       const [state,dispatch] = useReducer(reducer, initialState);
       const [itemAmount, setItemAmount] = useState(0);
 

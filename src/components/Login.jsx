@@ -1,4 +1,5 @@
 import { UseGlobalContext } from "../context";
+import './Login.scss'
 
 
 function Login(){

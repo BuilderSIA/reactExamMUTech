@@ -1,10 +1,11 @@
 import { UseGlobalContext } from "../../context";
-
+import './Profile.scss'
 
 function Profile() {
     const {signOut,user} = UseGlobalContext();
     return (
-        <div>
+      <div className="container">
+          <div className="card">
             <h2>
                 {user.name ? 'Profile' : 'No user'}
             </h2>
@@ -12,6 +13,7 @@ function Profile() {
                 Sign out
             </button>
         </div>
+      </div>
     );
 }
 

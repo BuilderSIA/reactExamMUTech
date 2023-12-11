@@ -1,5 +1,4 @@
 import { Route, Routes } from 'react-router-dom'
-import './App.css'
 import { Login, Navbar, ProtectedRoute } from './components'
 import { AboutUs, Cards, Cart, Home, Profile } from './pages'
 import { UseGlobalContext } from './context'

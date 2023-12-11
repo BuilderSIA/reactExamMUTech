@@ -1,25 +1,36 @@
-/* eslint-disable react/prop-types */
-import { createContext, useContext, useEffect, useReducer, useState } from "react";
+import { createContext, useContext, useReducer, useState } from "react";
 import { reducer } from "./reducer";
 import { data } from "./data";
-import { getStore, getUser } from "./utils";
-import uuid from "react-uuid";
+
 
 
 
 const initialState = {
-    amount: 0,
+    amount: 1,
     loading: false,
-    total: 0,
     cart: data,
-  };
+}
 
 
 
 export const AppContext = createContext()
 
-export const AppProvider = ({children}) =>{
+export const AppProvider = ({ children }) => {
+    const [user, setUser] = useState(true)
+    const [state, dispatch] = useReducer(reducer, initialState)
 
+<<<<<<< HEAD
+
+    return (
+        <AppContext.Provider value={{
+            ...state,
+            user
+        }}>
+            {children}
+        </AppContext.Provider>
+    )
+}
+=======
   
       const [state,dispatch] = useReducer(reducer, initialState);
       const [itemAmount, setItemAmount] = useState(0);
@@ -115,6 +126,7 @@ export const AppProvider = ({children}) =>{
           </AppContext.Provider>
       )
   }
+>>>>>>> 3c314d17b0ebcac083fc66806d1941276bd34441
 
 export const UseGlobalContext = () => {
     return useContext(AppContext)

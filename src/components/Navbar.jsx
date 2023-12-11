@@ -1,3 +1,4 @@
+import './Navbar.scss'
 import { Link } from "react-router-dom";
 import { UseGlobalContext } from "../context";
 
@@ -6,7 +7,7 @@ export default function Navbar() {
 
   return (
     <div className="navbar">
-        <ul>
+        <ul className='navbar-ul'>
             <li>
               <Link className="navbar-li-item" to='/cards'>
               Home
@@ -25,9 +26,9 @@ export default function Navbar() {
             </li>
             <div className="navBTN" >
                     <Link to={'login'} >
-                    {!user.name ? <button onClick={()=> setLogin(!login)}>
+                    {!user.name ? <button className='navBTN' onClick={()=> setLogin(!login)}>
                         Sign in
-                     </button> : <button> {user.name}</button>}
+                     </button> : <button className='navBTN'> {user.name}</button>}
                     </Link>
                 </div>
         </ul>

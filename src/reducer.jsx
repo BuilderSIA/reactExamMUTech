@@ -1,4 +1,7 @@
+import { UseGlobalContext } from "./context"
+
 export const reducer = (state, action) => {
+    const {added} = UseGlobalContext();
     if(action.type==="CLEAR"){
         return localStorage.removeItem('cart')
     }
@@ -23,9 +26,9 @@ export const reducer = (state, action) => {
         return {...state, cart: decrement}
     }
     if(action.type === "TOTAL"){
-        let tmpAmount = state.cart.reduce((total,item)=>{
+        let tmpAmount = added.reduce((total,item)=>{
             return total += item.amount;
         },0)
-        return {...state, amount: tmpAmount}
+        return {...added, amount: tmpAmount}
     }
 }

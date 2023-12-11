@@ -6,16 +6,20 @@ import { UseGlobalContext } from "../../context"
 
 
 
-export default function Card({id, name, price, description, img}) {
+export default function Card({id, name, price, description, img,amount}) {
  const {addCart} = UseGlobalContext()
     return (
         <div className="card" key={id}>
-            <img src={img} alt='yoq' />
-            <h3>{name}</h3>
-            <h6>{price} so'm</h6>
-            <p>{description}</p>
-            <button onClick={()=>addCart(id)}>Buyurtma berish</button>
+            <img src={img} alt='yoq' className="item-img" />
+            <h3 className="item-name">{name}</h3>
+            <h6 className="item-price">{price} so'm</h6>
+            <p className="item-info">{description}</p>
+            <div className="item-amount-cont">
+            <button className="value-dec">-</button>
+            <input className="item-amount-value" type="text"value={amount} />
+            <button className="value-inc">+</button>
+            </div>
+            <button onClick={()=>addCart(id)}>Tanlash</button>
         </div>
-
     )
 }

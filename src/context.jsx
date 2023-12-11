@@ -6,6 +6,7 @@ import { getStore, getUser } from "./utils";
 import uuid from "react-uuid";
 
 
+
 const initialState = {
     amount: 0,
     loading: false,
@@ -33,9 +34,9 @@ export const AppProvider = ({children}) =>{
       const dec = (id)=>{
         dispatch({type: "DEC", payload: id})
       }
-    //   const total = ()=>{
-    //     dispatch({type: "TOTAL"})
-    //   }
+      // const total = ()=>{
+      //   dispatch({type: "TOTAL"})
+      // }
   
       // const toCent =  document.querySelector('.prodCont');
       // const toNone =  document.querySelector('.prodList');
@@ -107,6 +108,7 @@ export const AppProvider = ({children}) =>{
         localStorage.setItem('user', JSON.stringify(user))
         localStorage.setItem('product',JSON.stringify(products))
         localStorage.setItem('cart',JSON.stringify(added))
+        // setAdded()
         // total()
       },[user,products,added])
     

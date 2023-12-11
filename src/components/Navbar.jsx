@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { UseGlobalContext } from "../context";
 
 export default function Navbar() {
-  const {login , setLogin,user} = UseGlobalContext()
+  const {login , setLogin,user,amount} = UseGlobalContext()
 
   return (
     <div className="navbar">
@@ -21,6 +21,7 @@ export default function Navbar() {
               <Link className="navbar-li-item" to='/cart'>
               Cart
               </Link>
+              {amount}
             </li>
             <div className="navBTN" >
                     <Link to={'login'} >

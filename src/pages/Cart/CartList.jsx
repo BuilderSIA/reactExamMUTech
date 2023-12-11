@@ -2,7 +2,6 @@
 
 
 function CartList({ name, price, description, img}) {
-    console.log(img);
     return (
         <div className="card">
             <img src={img} alt='yoq' />

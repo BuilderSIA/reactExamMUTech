@@ -1,4 +1,136 @@
 .logCont{
     position: fixed;
-    top: 500px;
+    top: 100px;
+    // border: 1px solid;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    .my-form{
+       align-items: center;
+       justify-content: center;
+       width: 500px;
+       height: 550px;
+       margin-top: 80px;
+       position: relative;
+       border-radius: 16px;
+       background: #261e5a;
+       box-shadow: 0 20px 60px #9265ca80;
+       border: 2px solid #dd946f;
+       transition: 0.2s;
+        .login-welcome-row{
+            display: flex;
+            width: 120px;
+            border: 1px solid;
+            height: 120px;
+            border-radius: 50%;
+            align-items: center;
+            background-color: chocolate;
+            z-index: 43;
+            position: relative;
+            margin-left: 180px;
+            margin-top: 70px;
+            box-shadow: 0px 0px 100px 20px rgba(154, 119, 198, 0.731);
+
+            img{
+                width: 120px;
+                margin-left: -10px;
+            }
+            
+        }
+        .closeBtn{
+            border:2px solid #dd946f;
+            position: absolute;
+            top: 20px;
+            width: 40px;
+            height: 40px;
+            right: 20px;
+            font-size: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-radius: 30%;
+            background: #F7D22D;
+            transition: 0.2s;
+            .closeBtn-btn{
+              color: black;
+            }
+        }
+        .closeBtn:hover{
+            border: 2px solid #cd7d7c;
+            border-radius: 50%;
+            background: red;
+            .closeBtn-btn{
+                color: wheat;
+              }
+        }
+        .inputs{
+            // border: 1px solid;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 50px;
+            input{
+                width: 270px;
+                height: 40px;
+                border: 2px solid #dd946f;
+                outline: none;
+                padding-left: 10px;
+                border-radius: 8px;
+                background-color: #9265ca80;
+                color: white;
+                transition: 0.2s;
+            }
+            input:hover{
+                width: 270px;
+                height: 40px;
+                border: 2px solid #cd7d7c;
+                outline: none;
+                padding-left: 10px;
+                border-radius: 8px;
+                background-color: #9265ca80;
+                color: white;
+            }
+            ::placeholder{
+                color: white;
+            }
+        }
+        .logBtn{
+            width: 150px;
+            height: 45px;
+            border: 3px solid #d8b828ae;
+            border-radius: 8px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f6d02a;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 550;
+            transition: 0.1s;
+            margin: 0 auto;
+            margin-top: 40px;
+        }
+        .logBtn:hover{
+            width: 150px;
+            height: 45px;
+            border: 3px solid #a58e24ae;
+            border-radius: 17px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f6d02a;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 550;
+        }
+    }
+    .my-form:hover{
+        border: 2px solid #cd7d7c;
+    }
 }

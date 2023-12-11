@@ -26,9 +26,9 @@ export const reducer = (state, action) => {
         return {...state, cart: decrement}
     }
     if(action.type === "TOTAL"){
-        let tmpAmount = added.reduce((total,item)=>{
+        let tmpAmount = state.cart.reduce((total,item)=>{
             return total += item.amount;
         },0)
-        return {...added, amount: tmpAmount}
+        return {...state, amount: tmpAmount}
     }
 }

@@ -9,7 +9,7 @@ function App() {
   const {login} = UseGlobalContext()
   return (
     <>
-      <Navbar />
+      {login?null:<Navbar />}
     <Routes>
     <Route path='login' element={ login ? <Login/> : < Profile/>}/>
       <Route path='about_us' element={<AboutUs/>}/>

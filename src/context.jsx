@@ -22,21 +22,29 @@ export const AppProvider = ({children}) =>{
 
   
       const [state,dispatch] = useReducer(reducer, initialState);
-  
+      const [itemAmount, setItemAmount] = useState(0);
+
   
   
       const clearCart = () =>{
         dispatch({type: "CLEAR"})
       }
-      const inc = (id)=>{
+      const inc = (id,e)=>{
         dispatch({type: "INC", payload: id})
+
+          setItemAmount(e+1)
       }
-      const dec = (id)=>{
+      const dec = (id,e)=>{
         dispatch({type: "DEC", payload: id})
+        
+          setItemAmount(e)
+       
       }
       // const total = ()=>{
       //   dispatch({type: "TOTAL"})
       // }
+
+      
   
       // const toCent =  document.querySelector('.prodCont');
       // const toNone =  document.querySelector('.prodList');
@@ -52,7 +60,7 @@ export const AppProvider = ({children}) =>{
       const [edit,setEdit] = useState(false);
       const [editID,setEditID] = useState(null);
       const [added, setAdded] = useState(getStore('cart'));
-    
+
       const userid = uuid();
       
       
@@ -61,45 +69,17 @@ export const AppProvider = ({children}) =>{
         setUser(newUser)
       }
     
-    //   const addProduct = () =>{
-    //     if(!name && !price){
-    //       console.log("Error");
-    //     } else if(pname && edit){
-    //       setProducts(products.map((item) => {
-    //         if(item.id === editID){
-    //           return {...item, name: pname, price:price}
-    //         }
-    //         return item
-    //       }))
-    //     }else{
-    //       const newProduct = { id:id, img:img, name:pname,price:price}
-    //       setProducts([...products , newProduct])
-    //     }
-    //   }
     
       const signOut = () =>{
         localStorage.removeItem('user');
         location.pathname = '/'
       }
     
-    //   const deleteProd = (id) =>{
-    //     const newProds = products.filter((item)=> item.id !== id);
-    //     setProducts(newProds)
-    //   }
-      
-    //   const editProd = (id) =>{
-    //     const oldItem = products.find((item) => item.id === id);
-    //     setEditID(id)
-    //     setPname(oldItem.name)
-    //     setPrice(oldItem.price)
-    //     setModal(!modal)
-    //     setEdit(true)
-    //   }
       const addCart = (id)=>{
         const theItem = products.find((item)=> item.id === id);
-        const cartItem = {id:theItem.id, img:theItem.img, price:theItem.price, name:theItem.name, amount:1}
+        const cartItem = {id:theItem.id, img:theItem.img, price:theItem.price, name:theItem.name, amount: itemAmount}
         setAdded([...added , cartItem])
-        location.reload()
+        // location.reload()
       }
   
   
@@ -127,7 +107,9 @@ export const AppProvider = ({children}) =>{
               products, setProducts, signOut,
               handSignIn, useEffect,
               clearCart,inc,dec,
-              addCart,added
+              addCart,
+              itemAmount, setItemAmount, 
+              added
           }}>
               {children}
           </AppContext.Provider>

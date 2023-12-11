@@ -1,7 +1,6 @@
 import { UseGlobalContext } from "./context"
 
 export const reducer = (state, action) => {
-    const {added} = UseGlobalContext();
     if(action.type==="CLEAR"){
         return localStorage.removeItem('cart')
     }

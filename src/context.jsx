@@ -57,7 +57,7 @@ export const AppProvider = ({children}) =>{
       // const toNone =  document.querySelector('.prodList');
       const [login, setLogin] = useState(false);
       const [name,setName] = useState('');
-      // const [email,setEmail] = useState('');
+      const [email,setEmail] = useState('+998');
       const [psw,setPsw] = useState('');
       const [user,setUser] = useState(getUser('user'));
       const [pname,setPname] = useState('');
@@ -72,7 +72,7 @@ export const AppProvider = ({children}) =>{
       
       
       const handSignIn = () =>{
-        const newUser = { id:userid, name: name, password: psw};
+        const newUser = { id:userid, name: name, password: psw, number:email};
         setUser(newUser)
       }
     
@@ -104,6 +104,7 @@ export const AppProvider = ({children}) =>{
               ...state,
               name, setName,
               psw, setPsw,
+              email,setEmail,
               userid,
               login, setLogin,
               pname, setPname,

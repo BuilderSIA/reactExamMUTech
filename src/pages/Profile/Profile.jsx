@@ -7,8 +7,11 @@ function Profile() {
       <div className="container">
           <div className="card">
             <h2>
-                {user.name ? 'Profile' : 'No user'}
+                {user.name ? user.name : 'No user'}
             </h2>
+            <h3>
+            {user.number ? user.number: ''}
+            </h3>
             <button onClick={()=>signOut()}>
                 Sign out
             </button>

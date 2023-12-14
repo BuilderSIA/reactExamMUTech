@@ -4,7 +4,7 @@ import Garfild from  '../img/112710-garfield-cartoon-free-transparent-image-hq-r
 import { IoIosClose } from "react-icons/io";
 
 function Login(){
-    const {login, setLogin, name,  setName, handSignIn} = UseGlobalContext()
+    const {login, setLogin, name,  setName, handSignIn,email, setEmail} = UseGlobalContext()
     return (
         <div className="logCont">
             <form className="my-form"  onSubmit={handSignIn}>
@@ -22,14 +22,13 @@ function Login(){
                 placeholder="Name"
                  value={name } onChange={(e)=>setName(e.target.value)}
                 />
-                <input 
-                type='text'
-                placeholder="Phone"
-                value='998' />
-                <input 
-                type="password" 
-                className="logInput" 
-                placeholder="Password"
+                <input
+                    type="tel"
+                    id="phoneNumber"
+                    name="phoneNumber"
+                    placeholder="Enter phone number"
+                    value={email}
+                    onChange={(e)=>setEmail(e.target.value)}
                 />
                </div>
                 <button className="logBtn">

@@ -7,7 +7,7 @@ import { UseGlobalContext } from "../../context"
 
 
 export default function Card({id, name, price, description, img,amount}) {
- const {addCart, inc, dec, setItemAmount} = UseGlobalContext()
+ const {addCart, inc, dec} = UseGlobalContext()
     // const itAmount = amount;
  
     return (

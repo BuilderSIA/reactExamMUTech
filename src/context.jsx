@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 
 import { createContext, useContext, useEffect, useReducer, useState } from "react";
 import { reducer } from "./reducer";
@@ -56,7 +57,7 @@ export const AppProvider = ({children}) =>{
       // const toNone =  document.querySelector('.prodList');
       const [login, setLogin] = useState(false);
       const [name,setName] = useState('');
-      // const [email,setEmail] = useState('');
+      const [email,setEmail] = useState('+998');
       const [psw,setPsw] = useState('');
       const [user,setUser] = useState(getUser('user'));
       const [pname,setPname] = useState('');
@@ -71,7 +72,7 @@ export const AppProvider = ({children}) =>{
       
       
       const handSignIn = () =>{
-        const newUser = { id:userid, name: name, password: psw};
+        const newUser = { id:userid, name: name, password: psw, number: email};
         setUser(newUser)
       }
     
@@ -85,7 +86,7 @@ export const AppProvider = ({children}) =>{
         const theItem = products.find((item)=> item.id === id);
         const cartItem = {id:theItem.id, img:theItem.img, price:theItem.price, name:theItem.name, amount: itemAmount}
         setAdded([...added , cartItem])
-        // location.reload()
+        location.reload()
       }
   
   
@@ -103,6 +104,7 @@ export const AppProvider = ({children}) =>{
               ...state,
               name, setName,
               psw, setPsw,
+              email, setEmail,
               userid,
               login, setLogin,
               pname, setPname,

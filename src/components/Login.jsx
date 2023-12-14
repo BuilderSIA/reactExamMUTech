@@ -4,7 +4,7 @@ import Garfild from  '../img/112710-garfield-cartoon-free-transparent-image-hq-r
 import { IoIosClose } from "react-icons/io";
 
 function Login(){
-    const {login, setLogin, name,  setName, handSignIn,email, setEmail} = UseGlobalContext()
+    const {login, setLogin, name,  setName, handSignIn,email, number, setEmail} = UseGlobalContext()
     return (
         <div className="logCont">
             <form className="my-form"  onSubmit={handSignIn}>

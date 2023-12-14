@@ -6,6 +6,9 @@
     height: 100vh;
     display: flex;
     justify-content: center;
+    top: 0px;
+    align-items: center;
+    background: linear-gradient(0deg, rgba(247, 210, 45, 0.40) 0%, rgba(247, 210, 45, 0.40) 100%), rgba(33, 49, 52, 0.20);
     .my-form{
        align-items: center;
        justify-content: center;
@@ -17,6 +20,7 @@
        background: #261e5a;
        box-shadow: 0 20px 60px #9265ca80;
        border: 2px solid #dd946f;
+       
        transition: 0.2s;
         .login-welcome-row{
             display: flex;

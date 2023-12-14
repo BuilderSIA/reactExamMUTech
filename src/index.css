@@ -6,4 +6,6 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     max-width: 19;
     text-decoration: none;
+    cursor: url(./img/cursor.png), auto;
+   
 }

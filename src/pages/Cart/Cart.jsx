@@ -1,12 +1,12 @@
 import { UseGlobalContext } from "../../context";
 import CartList from "./CartList";
-
+import './Cart.scss'
 
 
 function Cart() {
     const {added} = UseGlobalContext()
     return (
-        <div>
+        <div className="container-cart">
             {added.map((item)=><CartList key={item.id} {...item}/>)}
             <button onClick={()=>{
                 localStorage.removeItem('cart')

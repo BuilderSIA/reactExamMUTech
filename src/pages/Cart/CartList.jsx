@@ -3,7 +3,7 @@
 
 function CartList({ name, price, description, img,amount}) {
     return (
-        <div className="card">
+        <div className="cart">
             <img src={img} alt='yoq' />
             <h3>{name}</h3>
             <h6>{price} sum</h6>

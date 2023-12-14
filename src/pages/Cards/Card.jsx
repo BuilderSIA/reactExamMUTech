@@ -11,8 +11,11 @@ export default function Card({id, name, price, description, img,amount}) {
     // const itAmount = amount;
  
     return (
-        <div className="card" key={id}>
+       <div className="container-card">
+            <div className="home-card" key={id}>
+            <div className="card-img">
             <img src={img} alt='yoq' className="item-img" />
+            </div>
             <h3 className="item-name">{name}</h3>
             <h6 className="item-price">{price} so'm</h6>
             <p className="item-info">{description}</p>
@@ -21,7 +24,8 @@ export default function Card({id, name, price, description, img,amount}) {
             <input className="item-amount-value" type="text" value={amount} />
             <button className="value-inc" onClick={() => inc(id,amount)}>+</button>
             </div>
-            <button onClick={()=>addCart(id)}>Tanlash</button>
+            <button className='home-card-button' onClick={()=>addCart(id)}>Tanlash</button>
         </div>
+       </div>
     )
 }

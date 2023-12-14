@@ -67,6 +67,7 @@ export const AppProvider = ({children}) =>{
       const [edit,setEdit] = useState(false);
       const [editID,setEditID] = useState(null);
       const [added, setAdded] = useState(getStore('cart'));
+      const [recipe,setRecipe] = useState([]);
 
       const userid = uuid();
       
@@ -79,13 +80,15 @@ export const AppProvider = ({children}) =>{
     
       const signOut = () =>{
         localStorage.removeItem('user');
-        location.pathname = '/'
+        localStorage.removeItem('cart');
+        location.pathname = '/';
       }
     
       const addCart = (id)=>{
         const theItem = products.find((item)=> item.id === id);
         const cartItem = {id:theItem.id, img:theItem.img, price:theItem.price, name:theItem.name, amount: itemAmount}
         setAdded([...added , cartItem])
+        setRecipe([...recipe,cartItem])
         // location.reload()
       }
   
@@ -95,9 +98,10 @@ export const AppProvider = ({children}) =>{
         localStorage.setItem('user', JSON.stringify(user))
         localStorage.setItem('product',JSON.stringify(products))
         localStorage.setItem('cart',JSON.stringify(added))
+        localStorage.setItem('recipe',JSON.stringify(recipe))
         // setAdded()
         // total()
-      },[user,products,added])
+      },[user,products,added,recipe])
     
       return (
           <AppContext.Provider value={{
@@ -117,7 +121,7 @@ export const AppProvider = ({children}) =>{
               clearCart,inc,dec,
               addCart,
               itemAmount, setItemAmount, 
-              added
+              added,recipe,setRecipe
           }}>
               {children}
           </AppContext.Provider>

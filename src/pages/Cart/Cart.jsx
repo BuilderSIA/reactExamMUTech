@@ -4,7 +4,7 @@ import CartList from "./CartList";
 
 
 function Cart() {
-    const {added} = UseGlobalContext()
+    const {added,setRecipe} = UseGlobalContext()
     return (
         <div>
             {added.map((item)=><CartList key={item.id} {...item}/>)}
@@ -13,6 +13,11 @@ function Cart() {
                 location.reload()
                 }}>
                 clear
+            </button>
+            <button onClick={()=>{
+                setRecipe(added)
+            }}>
+                Buyurtma berish
             </button>
         </div>  
         

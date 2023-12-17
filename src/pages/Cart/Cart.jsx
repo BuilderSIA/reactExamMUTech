@@ -1,6 +1,7 @@
 import { UseGlobalContext } from "../../context";
 import CartList from "./CartList";
 import './Cart.scss'
+import Footer from "../../components/Footer";
 
 
 function Cart() {

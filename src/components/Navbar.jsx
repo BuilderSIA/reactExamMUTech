@@ -2,6 +2,7 @@ import './Navbar.scss'
 import { Link } from "react-router-dom";
 import { UseGlobalContext } from "../context";
 
+
 export default function Navbar() {
   const {login , setLogin,user,amount} = UseGlobalContext()
 
@@ -31,9 +32,9 @@ export default function Navbar() {
         </ul>
             <div className="navBTN" >
                     <Link to={'login'} >
-                    {!user.name ? <button data-label="Register" class="rainbow-hover" onClick={()=> setLogin(!login)}>
-                        <span class="sp">Register</span>
-                     </button> : <button  data-label="Register" class="rainbow-hover" > {user.name}</button>}
+                    {!user.name ? <button data-label="Register" className="rainbow-hover" onClick={()=> setLogin(!login)}>
+                        <span className="sp">Register</span>
+                     </button> : <button  data-label="Register" className="rainbow-hover" > {user.name}</button>}
                     </Link>
                 </div>
     </div>

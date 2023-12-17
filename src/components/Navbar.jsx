@@ -1,6 +1,7 @@
 import './Navbar.scss'
 import { Link } from "react-router-dom";
 import { UseGlobalContext } from "../context";
+import LogoSvg from '../img/logo-big.png'
 
 export default function Navbar() {
   const {login , setLogin,user,amount} = UseGlobalContext()
@@ -8,7 +9,7 @@ export default function Navbar() {
   return (
     <div className="navbar">
       <div className="navbar-logo">
-        <img src="" alt="" />
+        <img src={LogoSvg} alt="" />
         <h2>Logo</h2>
       </div>
         <ul className='navbar-ul'>

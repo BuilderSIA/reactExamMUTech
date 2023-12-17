@@ -2,7 +2,7 @@ import { Route, Routes } from 'react-router-dom'
 import { Login, Navbar, ProtectedRoute } from './components'
 import { AboutUs, Cards, Cart, Home, Profile } from './pages'
 import { UseGlobalContext } from './context'
-import Footer from './components/Footer'
+// import Footer from './components/Footer'
 
 
 
@@ -23,6 +23,7 @@ function App() {
       </ProtectedRoute>
       }/>
     </Routes>
+    
   
     </>
     

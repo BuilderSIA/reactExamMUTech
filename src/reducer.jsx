@@ -1,4 +1,4 @@
-import { UseGlobalContext } from "./context"
+
 
 export const reducer = (state, action) => {
     if(action.type==="CLEAR"){

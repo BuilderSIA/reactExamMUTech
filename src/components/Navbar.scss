@@ -5,15 +5,25 @@
     display: flex;
     justify-content: center;
     background-color: white;
-    // position: fixed;
+    align-items: center;
     position: fixed;
     z-index: 99;
     box-shadow:0px 0px 10px 1px rgba(0, 0, 0, 0.2);
+    .navbar-logo{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      left: 50px;
+      position: absolute;
+      border: 1px solid;
+      width: 100px;
+      height: 50px;
+    }
     .navbar-ul{
         display: flex;
         align-items: center;
         justify-content: space-around;
-        width: 75%;
+        width: 40%;
         // border: 1px solid;
         height: 100px;
         list-style: none;
@@ -30,34 +40,54 @@
             color: #F7D22D;
             font-size: 22px;
         }
-        .navBTN{
-            width: 150px;
-            height: 45px;
-            border: 3px solid #d8b828ae;
-            border-radius: 8px;
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #f6d02a;
-            font-size: 22px;
-            font-style: normal;
-            font-weight: 550;
-            transition: 0.1s;
+        // .navBTN:hover{
+          //     width: 150px;
+          //     height: 45px;
+          //     border: 3px solid #a58e24ae;
+          //     border-radius: 17px;
+          //     text-align: center;
+          //     display: flex;
+          //     align-items: center;
+          //     justify-content: center;
+          //     background: #f6d02a;
+          //     font-size: 22px;
+          //     font-style: normal;
+          //     font-weight: 550;
+          // }
         }
-        .navBTN:hover{
-            width: 150px;
-            height: 45px;
-            border: 3px solid #a58e24ae;
-            border-radius: 17px;
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #f6d02a;
-            font-size: 22px;
-            font-style: normal;
-            font-weight: 550;
-        }
-    }
+        .rainbow-hover {
+            font-size: 16px;
+            font-weight: 700;
+            color: ffea00;
+            background-color: #2B3044;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 12px 24px;
+            position: relative;
+            line-height: 24px;
+            border-radius: 9px;
+            box-shadow: 0px 1px 2px #2B3044,
+              0px 4px 16px #2B3044;
+            transform-style: preserve-3d;
+            transform: scale(var(--s, 1)) perspective(600px)
+              rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+            perspective: 600px;
+            transition: transform 0.1s;
+            right: 20px;
+          }
+          
+          .sp {
+            background: #ffdd00;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            display: block;
+          }
+          
+          .rainbow-hover:active {
+            transition: 0.3s;
+            transform: scale(0.93);
+          }
 }

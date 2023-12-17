@@ -7,15 +7,19 @@ export default function Navbar() {
 
   return (
     <div className="navbar">
+      <div className="navbar-logo">
+        <img src="" alt="" />
+        <h2>Logo</h2>
+      </div>
         <ul className='navbar-ul'>
             <li>
               <Link className="navbar-li-item" to='/cards'>
-              Home
+              Bosh qism
               </Link>
             </li>
             <li>
               <Link className="navbar-li-item" to='about_us'>
-              About us
+              Haqida
               </Link>
             </li>
             <li>
@@ -24,14 +28,14 @@ export default function Navbar() {
               </Link>
               {amount}
             </li>
+        </ul>
             <div className="navBTN" >
                     <Link to={'login'} >
-                    {!user.name ? <button className='navBTN' onClick={()=> setLogin(!login)}>
-                        Sign in
-                     </button> : <button className='navBTN'> {user.name}</button>}
+                    {!user.name ? <button data-label="Register" class="rainbow-hover" onClick={()=> setLogin(!login)}>
+                        <span class="sp">Register</span>
+                     </button> : <button  data-label="Register" class="rainbow-hover" > {user.name}</button>}
                     </Link>
                 </div>
-        </ul>
     </div>
   )
 }

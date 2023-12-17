@@ -9,8 +9,10 @@
         position: relative;
         top: 150px;
         z-index: 1;
-        border-radius: 18px;
-        box-shadow:0px 0px 10px 1px rgba(0, 0, 0, 0.17);
+        border-radius: 16px;
+        background: #fff;
+        box-shadow:  22px 22px 44px #c3c3c3,
+                     -22px -22px 44px #fdfdfd;
         .card-img{
          width: 100%;
          height: 50%;
@@ -43,6 +45,94 @@
             margin-top: 15px;
             margin-left: 10px;
         }
+        .rating {
+            display: flex;
+            flex-direction: row-reverse;
+            gap: 0.3rem;
+            --stroke: #666;
+            --fill: #ffc73a;
+            // border: 1px solid;
+            width: 60%;
+          }
+          
+          .rating input {
+            appearance: unset;
+          }
+          
+          .rating label {
+            cursor: pointer;
+          }
+          
+          .rating svg {
+            width: 2rem;
+            height: 2rem;
+            overflow: visible;
+            fill: transparent;
+            stroke: var(--stroke);
+            stroke-linejoin: bevel;
+            stroke-dasharray: 12;
+            animation: idle 4s linear infinite;
+            transition: stroke 0.2s, fill 0.5s;
+          }
+          
+          @keyframes idle {
+            from {
+              stroke-dashoffset: 24;
+            }
+          }
+          
+          .rating label:hover svg {
+            stroke: var(--fill);
+          }
+          
+          .rating input:checked ~ label svg {
+            transition: 0s;
+            animation: idle 4s linear infinite, yippee 0.75s backwards;
+            fill: var(--fill);
+            stroke: var(--fill);
+            stroke-opacity: 0;
+            stroke-dasharray: 0;
+            stroke-linejoin: miter;
+            stroke-width: 8px;
+          }
+          
+          @keyframes yippee {
+            0% {
+              transform: scale(1);
+              fill: var(--fill);
+              fill-opacity: 0;
+              stroke-opacity: 1;
+              stroke: var(--stroke);
+              stroke-dasharray: 10;
+              stroke-width: 1px;
+              stroke-linejoin: bevel;
+            }
+          
+            30% {
+              transform: scale(0);
+              fill: var(--fill);
+              fill-opacity: 0;
+              stroke-opacity: 1;
+              stroke: var(--stroke);
+              stroke-dasharray: 10;
+              stroke-width: 1px;
+              stroke-linejoin: bevel;
+            }
+          
+            30.1% {
+              stroke: var(--fill);
+              stroke-dasharray: 0;
+              stroke-linejoin: miter;
+              stroke-width: 8px;
+            }
+          
+            60% {
+              transform: scale(1.2);
+              fill: var(--fill);
+            }
+          }
+          
+          
         .item-amount-cont{
             width: 45%;
             // border: 1px solid;
@@ -116,52 +206,68 @@
         .home-card-button{
             position: absolute;
             bottom: 10px;
-            right: 10px;
+            right: 15px;
             height: 50px;
             width: 40%;
-            // border: 2px solid #d8b828ae;
-            border-radius: 8px;
-            background: #F7D22D;
-            font-size: 20px;
-            color: #fff;
-            font-weight: 700;
-            line-height: 28px; 
-            font-style: normal;
-            transition: 0.2s;
-            outline: none !important;
+           
         }
-        .home-card-button:hover,.home-card-button:focus{
+        .cta {
+            border: none;
+            background: none;
+            // border: 1px solid;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            text-align: center;
+        }
+        .cta span {
+          padding-bottom: 7px;
+          letter-spacing: 4px;
+          font-size: 14px;
+          padding-right: 5px;
+          text-transform: uppercase;
+          .cta svg {
+            transform: translateX(-8px);
+            transition: all 0.3s ease;
+            text-align: center;
             position: absolute;
-            bottom: 10px;
-            right: 10px;
-            height: 50px;
-            width: 40%;
-            // border: 2px solid #d8b828ae;
-            border-radius: 8px;
-            background: #F7D22D;
-            font-size: 20px;
-            color: #231F20;
-            font-weight: 700;
-            line-height: 28px; 
-            font-style: normal;
-            // outline: none;
+            // width: 10px;
 
+          }
+        }    
+          .cta:hover svg {
+            transform: translateX(0);
         }
-        .home-card-button:focus{
+        
+        .cta:active svg {
+            transform: scale(0.7);
+            width: 10px;
+          }
+          
+          .hover-underline-animation {
+            position: relative;
+            color: black;
+            padding-bottom: 20px;
+          }
+          
+          .hover-underline-animation:after {
+            content: "";
             position: absolute;
-            bottom: 10px;
-            right: 10px;
-            height: 50px;
-            width: 40%;
-            // border: 2px solid #d8b828ae;
-            border-radius: 8px;
-            background: #F7D22D;
-            font-size: 20px;
-            color: #231F20;
-            font-weight: 700;
-            line-height: 28px; 
-            font-style: normal;
-            outline: none;
-        }
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #000000;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+            
+          }
+          
+          .cta:hover .hover-underline-animation:after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+            
+          }
     }
 }

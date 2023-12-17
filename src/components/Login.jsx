@@ -31,7 +31,7 @@ function Login(){
                     onChange={(e)=>setEmail(e.target.value)}
                 />
                </div>
-                <button className="logBtn">
+                <button data-label="Register" class="rainbow-hover">
                     Sign in
                 </button>
             </form>

@@ -14,8 +14,9 @@ function Cart() {
                 }}>
                 clear
             </button>
+            <Footer/>
         </div>  
-        
+      
     );
 }
 

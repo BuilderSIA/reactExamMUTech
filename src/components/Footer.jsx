@@ -1,6 +1,6 @@
 
 import './Footer.scss'
-import svgLogo from '../img/logo.svg'
+import svgLogo from '../img/logo-big-removebg-preview.png'
 
 export default function Footer() {
   return (
@@ -34,9 +34,9 @@ export default function Footer() {
         <a> Privacy </a>
       </div>
       <div className="links">
-        <a className="fa-brands fa-github"></a>
+        {/* <a className="fa-brands fa-github"></a>
         <a className="fa-brands fa-linkedin"></a>
-        <a className="fa-brands fa-docker"></a>
+        <a className="fa-brands fa-docker"></a> */}
       </div>
     </footer>
   </section>

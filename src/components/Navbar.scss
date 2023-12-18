@@ -9,57 +9,101 @@
     position: fixed;
     z-index: 99;
     box-shadow:0px 0px 10px 1px rgba(0, 0, 0, 0.2);
-    .navbar-logo{
+    background-color: #172940;
+    .navbar-link-logo{
       display: flex;
       align-items: center;
       justify-content: center;
-      left: 50px;
+      left: 100px;
       position: absolute;
-      border: 1px solid;
       width: 100px;
-      height: 50px;
-    }
+      height: 40px;
+      .navbar-logo{
+         transition: 0.5s;
+        img{
+          width: 100%;
+          height: 100%;
+          transition: 0.5s;
+        }
+        span{
+          font-weight: 800;
+          color: #ffd000;
+          font-style: normal;
+        }
+      }
+      .beta-box{
+        position: absolute;
+        width: 50px;
+        border: 1px solid #fb8500 ;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50px;
+        background: #fb8500;
+        left: 120px;
+        h4{
+        color: #fff;
+        font-style: normal;
+        font-weight: 600;
+        }
+      }
+      // .navbar-link-logo:hover{
+      //   display: flex;
+      //   align-items: center;
+      //   justify-content: center;
+      //   left: 100px;
+      //   position: absolute;
+      //   width: 150px;
+      //   height: 40px;
+      //   }
+
+      //   .navbar-logo:hover{
+      //     border: 1px solid;
+      //     width: 170px;
+          
+      //     img{
+      //       width: 150px;
+      //       height: 100%;
+      //     }
+      //     img:hover{
+      //       width: 100%;
+      //       height: 100%;
+      //     }
+      //     span{
+      //       font-weight: 800;
+      //       color: #ffd000;
+      //       font-style: normal;
+      //       display: none;
+      //     }
+      //   }
+      }
     .navbar-ul{
         display: flex;
         align-items: center;
         justify-content: space-around;
-        width: 40%;
+        width: 35%;
         // border: 1px solid;
         height: 100px;
         list-style: none;
         margin: 0 auto;
         .navbar-li-item{
             text-decoration: none;
-            color: #000;
+            color: #ffd00094;
             font-size: 22px;
             transition: 0.2s;
             font-weight: 500;
         }
         .navbar-li-item:hover{
             text-decoration: none;
-            color: #F7D22D;
+            color: #ffd000;
             font-size: 22px;
         }
-        // .navBTN:hover{
-          //     width: 150px;
-          //     height: 45px;
-          //     border: 3px solid #a58e24ae;
-          //     border-radius: 17px;
-          //     text-align: center;
-          //     display: flex;
-          //     align-items: center;
-          //     justify-content: center;
-          //     background: #f6d02a;
-          //     font-size: 22px;
-          //     font-style: normal;
-          //     font-weight: 550;
-          // }
         }
         .rainbow-hover {
             font-size: 16px;
             font-weight: 700;
             color: ffea00;
-            background-color: #2B3044;
+            background-color: #3c4361;
             border: none;
             outline: none;
             cursor: pointer;
@@ -74,17 +118,43 @@
               rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
             perspective: 600px;
             transition: transform 0.1s;
-            right: 20px;
+            right: 100px;
+            color: #e0b90c;
+            transition: 0.2s;
+            .sp {
+              background: #ffdd00;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              background-clip: text;
+              text-fill-color: transparent;
+              display: block;
+            }
+          }
+          .rainbow-hover:hover {
+            font-size: 16px;
+            font-weight: 700;
+            color: ffea00;
+            background-color: #3c4361;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 12px 24px;
+            position: relative;
+            line-height: 24px;
+            border-radius: 9px;
+            box-shadow: 0px 1px 2px #2B3044,
+              0px 4px 16px #2B3044;
+            transform-style: preserve-3d;
+            transform: scale(var(--s, 1)) perspective(600px)
+              rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+            perspective: 600px;
+            transition: transform 0.1s;
+            right: 100px;
+            color: #ffd000;
+           
           }
           
-          .sp {
-            background: #ffdd00;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-fill-color: transparent;
-            display: block;
-          }
+          
           
           .rainbow-hover:active {
             transition: 0.3s;

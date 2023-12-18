@@ -1,17 +1,23 @@
 import './Navbar.scss'
 import { Link } from "react-router-dom";
 import { UseGlobalContext } from "../context";
-
+import LogoSVG from '../img/logo-big-removebg-preview.png'
+// import HomeIcon from '../icons/Home_custom_icon (1).json'
 
 export default function Navbar() {
   const {login , setLogin,user,amount} = UseGlobalContext()
 
   return (
     <div className="navbar">
-      <div className="navbar-logo">
-        <img src="" alt="" />
-        <h2>Logo</h2>
+       <Link className='navbar-link-logo' to='/cards'>
+       <div className="navbar-logo">
+        <img src={LogoSVG} alt="" />
+        <span>BIG BURGER</span>
       </div>
+      <div className="beta-box">
+        <h4>Beta</h4>
+      </div>
+       </Link>  
         <ul className='navbar-ul'>
             <li>
               <Link className="navbar-li-item" to='/cards'>

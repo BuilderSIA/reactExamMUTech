@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
 import { Login, Navbar, ProtectedRoute } from './components'
-import { AboutUs, Cards, Cart, Home, Profile } from './pages'
+import { AboutUs, Cards, Cart, Profile } from './pages'
 import { UseGlobalContext } from './context'
 // import Footer from './components/Footer'
 
@@ -15,7 +15,7 @@ function App() {
     <Routes>
     <Route path='login' element={ login ? <Login/> : < Profile/>}/>
       <Route path='about_us' element={<AboutUs/>}/>
-      <Route path='/' element={<Home />} />
+      <Route path='/' element={<Cards />} />
       <Route path='/cards' element={<Cards />} />
       <Route path='/cart' element={
       <ProtectedRoute>

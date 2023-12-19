@@ -183,8 +183,9 @@
                 // margin: 0px 2px 0px 0px;
                 display: flex;
                 align-items: center;
-                justify-content: center;
+                justify-content: space-around;
                 text-align: center;
+                // border: 1px solid
             }
             .value-inc{
                 flex: 5;
@@ -234,6 +235,7 @@
             padding: 2px;
             text-align: center;
             border-radius: 50px;
+            
         }
         .cta span {
           padding-bottom: 7px;
@@ -241,6 +243,11 @@
           font-size: 14px;
           padding-right: 5px;
           text-transform: uppercase;
+          .shoping-icon{
+            position: absolute;
+            margin-left: 5px;
+            top: 3px;
+          }
           .cta svg {
             transform: translateX(-8px);
             transition: all 0.3s ease;
@@ -288,4 +295,5 @@
             
           }
     }
-}
+  
+  }

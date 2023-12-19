@@ -34,9 +34,9 @@ export default function Footer() {
         <a> Privacy </a>
       </div>
       <div className="links">
-        {/* <a className="fa-brands fa-github"></a>
-        <a className="fa-brands fa-linkedin"></a>
-        <a className="fa-brands fa-docker"></a> */}
+        <a className="fa-brands fa-telegram"></a>
+        <a className="fa-brands fa-instagram"></a>
+        <a className="fa-brands fa-facebook"></a>
       </div>
     </footer>
   </section>

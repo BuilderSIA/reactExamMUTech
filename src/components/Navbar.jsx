@@ -12,7 +12,7 @@ export default function Navbar() {
        <Link className='navbar-link-logo' to='/cards'>
        <div className="navbar-logo">
         <img src={LogoSVG} alt="" />
-        <span>BIG BURGER</span>
+        <span>BURGER</span>
       </div>
       <div className="beta-box">
         <h4>Beta</h4>

@@ -7,7 +7,8 @@ import Footer from "../../components/Footer";
 function Cart() {
     const {added} = UseGlobalContext()
     return (
-        <div className="container-cart">
+      <div className="containner">
+          <div className="container-cart">
             {added.map((item)=><CartList key={item.id} {...item}/>)}
             <button onClick={()=>{
                 localStorage.removeItem('cart')
@@ -15,8 +16,9 @@ function Cart() {
                 }}>
                 clear
             </button>
-            <Footer/>
         </div>  
+            <Footer/>
+      </div>
       
     );
 }

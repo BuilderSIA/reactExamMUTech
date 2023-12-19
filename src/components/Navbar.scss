@@ -18,6 +18,7 @@
       position: absolute;
       width: 100px;
       height: 40px;
+      text-align: center;
       .navbar-logo{
          transition: 0.5s;
         img{
@@ -26,6 +27,7 @@
           transition: 0.5s;
         }
         span{
+          text-align: center;
           font-weight: 800;
           color: #ffd000;
           font-style: normal;

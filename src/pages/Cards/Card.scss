@@ -95,7 +95,7 @@
             stroke: var(--fill);
           }
           
-          .rating input:checked ~ label svg {
+         :root.rating input:checked ~ label svg {
             transition: 0s;
             animation: idle 4s linear infinite, yippee 0.75s backwards;
             fill: var(--fill);

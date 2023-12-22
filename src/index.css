@@ -8,9 +8,12 @@
     text-decoration: none;
     cursor: url(./img/cursor.png), auto;
     transition: 0.2s;
+
+    
     
    
 }
 body{
     background-color: #f4f4f4;
+    
 }

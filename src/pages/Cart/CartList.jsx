@@ -12,6 +12,7 @@ function CartList({ name, price, description, img,amount}) {
             <h6>{price} sum</h6>
             <p>{description}</p>
             <p>{amount}</p>
+         
         </div>
     );
 }

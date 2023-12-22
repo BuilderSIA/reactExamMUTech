@@ -29,7 +29,7 @@ export const AppProvider = ({children}) =>{
 
 
       const [state,dispatch] = useReducer(reducer, initialState);
-      const [itemAmount, setItemAmount] = useState(0);
+      const [itemAmount, setItemAmount] = useState(1);
 
   
   

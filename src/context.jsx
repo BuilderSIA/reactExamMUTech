@@ -67,6 +67,7 @@ export const AppProvider = ({children}) =>{
       const [edit,setEdit] = useState(false);
       const [editID,setEditID] = useState(null);
       const [added, setAdded] = useState(getStore('cart'));
+      // const [rating,setRating] = useState(0)
 
       const userid = uuid();
       
@@ -89,7 +90,11 @@ export const AppProvider = ({children}) =>{
         location.reload()
       }
   
-  
+      const rating = (e)=>{
+        // products.find((item)=>item.id===id)
+        console.log(e.target.id);
+        
+      }
     
       useEffect(()=>{
         localStorage.setItem('user', JSON.stringify(user))
@@ -117,7 +122,7 @@ export const AppProvider = ({children}) =>{
               clearCart,inc,dec,
               addCart,
               itemAmount, setItemAmount, 
-              added
+              added,rating
           }}>
               {children}
           </AppContext.Provider>
